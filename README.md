@@ -70,5 +70,10 @@ r=corr(x,y,n1);
 plot2d3('gnn',r);
 ```
 # OUTPUT
+<img width="814" height="1600" alt="image" src="https://github.com/user-attachments/assets/a35ae895-77cd-404d-8889-bb7674842d1a" />
+<img width="1000" height="1600" alt="image" src="https://github.com/user-attachments/assets/1e9a4626-3886-4e9c-bf9a-5f5b0ac05c61" />
+<img width="917" height="1600" alt="image" src="https://github.com/user-attachments/assets/89c6fe71-b6da-482e-82b7-1d48f10a17fd" />
+
+
 
 
