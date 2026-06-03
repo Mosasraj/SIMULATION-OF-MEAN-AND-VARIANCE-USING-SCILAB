@@ -24,56 +24,60 @@ To write a program for mean, variance and cross correlation in SCILAB and verify
 •	Verify the generated results
 # PROGRAM
 ```
-//MEAN
-
+clear;
+clc;
+clear;
 function X=f(x)
-    z=12*(1-x)^2
+    z=3*(2-x)^2
     X=x*z
-endfunction 
+endfunction
 a=0;
 b=1;
 EX=intg(a,b,f);
 function Y=c(y)
-z=12*(1-y)^2
-Y=y*z
+    z=3*(2-y)^2
+    Y=y*z
 endfunction
 EY=intg(a,b,c);
-disp(EX,"i)Mean of X =")
-disp(EY," Mean of Y =")
-
-//VARIANCE
-
+disp(EX,"i)Mean of X=")
+disp(EY,"Mean of Y=")
 function X=g(x)
-    z=12*(1-x)^2
+    z=3*(2-x)^2
     X=x^2*z
 endfunction
 a=0;
 b=1;
-EX2=intg(a,b,g); 
+EX2=intg(a,b,g);
 function Y=h(y)
-z=12*(1-y)^2
-Y=y^2*z
+    z=3*(2-y)^2
+    Y=y^2*z
 endfunction
 EY2=intg(a,b,h);
 vX2=EX2-(EX)^2;
 vY2=EY2-(EY)^2;
-disp(vX2,"ii)Variance of X");
-disp(vY2," Variance of Y");
-
-//CROSS CORRELATION
-
-x= input("type in the reference sequence=");
-y= input("type in the second sequence=");
+disp(vX2,"ii) Variance of X");
+disp(vY2,"Variance of Y");
+x=[1 3 4 6 7 2 9 8];
+y=[2 5 8 4 6 1 7 3];
 n1=max(size(y))-1;
 n2=max(size(x))-1;
 r=corr(x,y,n1);
 plot2d3('gnn',r);
+
 ```
+# TABULATION
+<img width="982" height="1600" alt="image" src="https://github.com/user-attachments/assets/ffff3d73-55de-4281-89bc-4ee0d9dd692f" />
+
+# CALCULATION
+<img width="1600" height="1508" alt="image" src="https://github.com/user-attachments/assets/c827e94b-d5ef-44e0-b3e5-b535b018c76e" />
+<img width="988" height="1600" alt="image" src="https://github.com/user-attachments/assets/955a551a-99e2-4ac3-b7a9-3b7244008496" />
+
 # OUTPUT
-<img width="814" height="1600" alt="image" src="https://github.com/user-attachments/assets/a35ae895-77cd-404d-8889-bb7674842d1a" />
-<img width="1000" height="1600" alt="image" src="https://github.com/user-attachments/assets/1e9a4626-3886-4e9c-bf9a-5f5b0ac05c61" />
-<img width="917" height="1600" alt="image" src="https://github.com/user-attachments/assets/89c6fe71-b6da-482e-82b7-1d48f10a17fd" />
 
+<img width="1064" height="1533" alt="image" src="https://github.com/user-attachments/assets/32d00d8b-31a4-4065-a582-1760e69abb6e" />
 
+# RESULT
+
+Thus, the mean , variance and cross correlation are executed in scilab sucessfully.
 
 
